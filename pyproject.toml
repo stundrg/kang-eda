@@ -5,7 +5,7 @@ description = "For me Pandas"
 authors = [
     {name = "khr0106", email = "kanghr990106@gmail.com"},
 ]
-dependencies = []
+dependencies = ["pandas>=2.2.3"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
