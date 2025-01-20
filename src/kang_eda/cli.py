@@ -1,5 +1,6 @@
 from president_speech.db.parquet_interpreter import get_parquet_full_path
 import pandas as pd
+import typer
 
 
 
@@ -11,3 +12,6 @@ def group_by_count():
     gdf = fdf.groupby("president").size().reset_index(name="count")
     sdf = gdf.sort_values(by='count', ascending=False).reset_index(drop=True)
     print(sdf.to_string(index=False))
+
+def entry_point():
+    typer.run(group_by_count)
