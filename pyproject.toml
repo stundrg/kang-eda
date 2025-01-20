@@ -26,3 +26,6 @@ eda = [
 test = [
     "pytest>=8.3.4",
 ]
+
+[project.scripts]
+kang-eda = "kang_eda.cli:group_by_count"
