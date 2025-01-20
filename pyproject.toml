@@ -1,6 +1,6 @@
 [project]
 name = "kang-eda"
-version = "0.2.0"
+version = "0.3.0"
 description = "For me Pandas"
 authors = [
     {name = "khr0106", email = "kanghr990106@gmail.com"},
