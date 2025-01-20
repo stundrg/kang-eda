@@ -1,11 +1,15 @@
 [project]
 name = "kang-eda"
-version = "0.3.0"
-description = "For me Pandas"
+version = "0.3.1"
+description = "Default template for PDM package"
 authors = [
     {name = "khr0106", email = "kanghr990106@gmail.com"},
 ]
-dependencies = ["pandas>=2.2.3", "president-speech>=0.9.1"]
+dependencies = [
+    "pandas>=2.2.3",
+    "president-speech>=0.9.1",
+    "typer>=0.15.1",
+]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,7 +17,6 @@ license = {text = "MIT"}
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
 
 [tool.pdm]
 distribution = true
@@ -28,4 +31,4 @@ test = [
 ]
 
 [project.scripts]
-kang-eda = "kang_eda.cli:group_by_count"
+kang-eda = "kang_eda.cli:entry_point"
