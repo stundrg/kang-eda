@@ -6,6 +6,7 @@
 $ source .venv/bin/activate
 $ pdm add pandas
 $ pdm add -dG eda jupyterlab
+$ pdm add typer
 $ pdm add <...>
 
 $ git add .
