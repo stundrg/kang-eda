@@ -12,6 +12,8 @@ def group_by_count(keyword: str, asc: bool=False, row: int=12) -> pd.DataFrame:
     gdf = fdf.groupby("president").size().reset_index(name = "count")
     sdf = gdf.sort_values(by='count', ascending = asc).reset_index(drop = True)
     
+    if(row >12):
+        row == 12
     rdf = sdf.head(row)
     return rdf
 

@@ -3,12 +3,12 @@ from kang_eda.cli import group_by_count
 
 def test_first():
     row_count = 13
-    df = group_by_count("자유", False, row = row_count)
+    df = group_by_count("자유", True, row = row_count)
     # None 값이 아닌지
     assert df is not None
     # assert len(df) == 3
     assert isinstance(df, pd.DataFrame)
-    assert df.iloc[0]['president'] == '박정희'
+    assert df.iloc[0]['president'] == '윤보선'
     assert len(df) < row_count
     # 빈 문자열이 아닌지
     #assert v != ""
