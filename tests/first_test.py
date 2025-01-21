@@ -15,8 +15,8 @@ def test_first():
     # 문자열에 문자도 있고, 숫자도 있는지
     #assert any(t.isalpha() for t in v)
     #assert any(t.isdigit() for t in v)
-   # assert all(df_desc['count'].iloc[i] >= df_desc['count'].iloc[i + 1] for i in range(len(df_desc) - 1)), "Data is not sorted in descending order"
-   # assert all(df_asc['count'].iloc[i] <= df_asc['count'].iloc[i + 1] for i in range(len(df_asc) - 1)), "Data is not sorted in ascending order"
+   #  assert all(df_desc['count'].iloc[i] >= df_desc['count'].iloc[i + 1] for i in range(len(df_desc) - 1)), "Data is not sorted in descending order"
+    # assert all(df_asc['count'].iloc[i] <= df_asc['count'].iloc[i + 1] for i in range(len(df_asc) - 1)), "Data is not sorted in ascending order"
 def test_정열_및_행수제한():
     # given
     row_count = 3
