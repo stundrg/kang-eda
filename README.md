@@ -6,7 +6,9 @@
 $ source .venv/bin/activate
 $ pdm add pandas
 $ pdm add -dG eda jupyterlab
+$ pdm add typer
 $ pdm add <...>
+$ pdm add -dG pytest
 
 $ git add .
 $ git commit -m
@@ -26,7 +28,24 @@ $ jupyter lab
 $ pip install kang-eda or pdm add kang-eda
 $ python
 >>> from kang_eda.cli import group_by_count
->>> group_by_count()
+>>> group_by_count("TEXT FOR UR SEARCH", True or False, int for Count)
+
+###
+>>> from kang_eda.cli import group_by_count
+>>> group_by_count("행복" , True , 12)
+   president  count
+0        최규하     13
+1        이승만     51
+2        김영삼     84
+3        노태우    143
+4        박정희    154
+5        김대중    156
+6        노무현    184
+7        문재인    191
+8        전두환    191
+9        박근혜    277
+10       이명박    347
+###
 ```
 
 
