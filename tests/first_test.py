@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 from kang_eda.cli import group_by_count
 
 def test_first():
@@ -17,18 +18,17 @@ def test_first():
     #assert any(t.isdigit() for t in v)
    #  assert all(df_desc['count'].iloc[i] >= df_desc['count'].iloc[i + 1] for i in range(len(df_desc) - 1)), "Data is not sorted in descending order"
     # assert all(df_asc['count'].iloc[i] <= df_asc['count'].iloc[i + 1] for i in range(len(df_asc) - 1)), "Data is not sorted in ascending order"
-    @pytest.mark.parametrize("is_asc,president"[(),()])
-def test_정열_및_행수제한("is_asc,president"[(),()]):
+@pytest.mark.parametrize("is_asc, president",[(True,"윤보선"),(False,"박정희")])
+def test_sort(is_asc, president):
     # given
     row_count = 3
-    is_asc = True
 
     # when
     df = group_by_count(keyword = "자유", asc = is_asc, row = row_count)
 
     # assert
     assert isinstance(df, pd.DataFrame)
-    assert df.iloc[0]['president'] == '윤보선'
+    assert df.iloc[0]['president'] == president
     assert len(df) == row_count
 
 def test_정열_및_행수제한_asc():
@@ -54,7 +54,7 @@ def test_정열_및_행수제한_desc():
 
     # assert
     assert isinstance(df, pd.DataFrame)
-    assert df.iloc[0]['president'] == '윤보선'
+    assert df.iloc[0]['president'] == '박정희'
     assert len(df) == row_count
 
 
