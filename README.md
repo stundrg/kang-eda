@@ -30,6 +30,22 @@ $ python
 >>> from kang_eda.cli import group_by_count
 >>> group_by_count("TEXT FOR UR SEARCH", True or False, int for Count)
 
+kang-eda --help
+
+ Usage: kang-eda [OPTIONS] KEYWORD
+
+╭─ Arguments ──────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *    keyword      TEXT  [default: None] [required]                                                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --asc            --no-asc                     [default: no-asc]                                                      │
+│ --row                                INTEGER  [default: 12]                                                          │
+│ --keyword-sum    --no-keyword-sum             [default: no-keyword-sum]                                              │
+│ --help                                        Show this message and exit.                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+
 ###
 >>> from kang_eda.cli import group_by_count
 >>> group_by_count("행복" , True , 12)
