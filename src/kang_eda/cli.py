@@ -50,8 +50,15 @@ def print_group_by_count(keyword: str, asc: bool=False, row: int=12, keyword_sum
 #       print(tabulate(df))
     import termplotlib as tpl
     fig = tpl.figure()
+
     fig.barh(df['count'],df['president'], force_ascii = True)
     fig.show()
+
+    ## TODO = keyword_sum이 활성화 되면 keyword_sum 들어가게 하
+    if keyword_sum:
+        fig.barh(df['count'],df['president'], force_ascii = True)
+        fig.show()
+
     
 
 def entry_point():
